@@ -20,8 +20,8 @@ pipeline{
                     script{
                         if (env.rollback == 'false'){
                             docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials'){
+                                image.push("${env.app_version}")
                             }
-                        image.push("${env.app_version}")
                         }
                     }
                 }
