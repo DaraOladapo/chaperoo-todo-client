@@ -1,8 +1,8 @@
 pipeline{
         agent any
         environment {
-            app_version = 'v1'
-            rollback = 'true'
+            app_version = 'v3'
+            rollback = 'false'
             DB_PASSWORD='root'
         }
         stages{
